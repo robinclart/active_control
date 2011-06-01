@@ -5,7 +5,7 @@ require "active_control/version"
 Gem::Specification.new do |s|
   s.name        = "active_control"
 
-  s.version     = AccessControl::VERSION
+  s.version     = ActiveControl::VERSION
   s.platform    = Gem::Platform::RUBY
 
   s.summary     = "Very simple authorization solution."
