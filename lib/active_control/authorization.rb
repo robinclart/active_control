@@ -13,7 +13,8 @@ module ActiveControl
   module Authorization
     # FIXME: Explain what this method returns
     def authorize?(caller_object, action)
-      action = [caller_object.class.name, action.to_s].join("_to_").downcase
+      caller_name = caller_object.class.name.gsub("::", "_")
+      action = [caller_name, action.to_s].join("_to_").downcase
       self.send "authorize_#{action}?", caller_object
     end
   end

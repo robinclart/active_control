@@ -5,8 +5,17 @@ class User
   include ActiveControl::Ability
 end
 
+module Admin
+  class User
+  end
+end
+
 class Comment
   include ActiveControl::Authorization
+
+  def authorize_admin_user_to_manage?(user)
+    true
+  end
 
   def authorize_user_to_manage?(user)
     user
@@ -37,5 +46,9 @@ class TestActiveControl < MiniTest::Unit::TestCase
 
   def test_authorize?
     assert @comment.authorize?(@user, :read)
+  end
+
+  def test_authorize_in_a_namespace
+    assert @comment.authorize?(Admin::User.new, :manage)
   end
 end
