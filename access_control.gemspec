@@ -4,15 +4,18 @@ require "access_control/version"
 
 Gem::Specification.new do |s|
   s.name        = "access_control"
+
   s.version     = AccessControl::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["TODO: Write your name"]
-  s.email       = ["TODO: Write your email address"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
 
-  s.rubyforge_project = "access_control"
+  s.summary     = "Very simple authorization solution."
+  s.description = "Very simple authorization solution with no depedencies. Each permission is stored in its class and authorizations are given through a two methods interface."
+
+  s.authors     = ["Robin Clart"]
+  s.email       = ["robin@charlin.be"]
+  s.homepage    = "https://github.com/robinclart/access_control"
+
+  s.rubyforge_project = s.name
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
