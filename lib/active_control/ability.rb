@@ -1,12 +1,12 @@
-module AccessControl
-  # == Access Control Ability
+module ActiveControl
+  # == Active Control Ability
   #
   # FIXME: Explain what this class does.
   #
-  # To implement, just include AccessControl::Ability in your class:
+  # To implement, just include ActiveControl::Ability in your class:
   #
   #   class User
-  #     include AccessControl::Ability
+  #     include ActiveControl::Ability
   #   end
   #
   # FIXME: Explain what to do next.

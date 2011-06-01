@@ -1,12 +1,12 @@
-module AccessControl
-  # == Access Control Authorization
+module ActiveControl
+  # == Active Control Authorization
   #
   # FIXME: Explain what this class does.
   #
-  # To implement, just include AccessControl::Authorization in your class:
+  # To implement, just include ActiveControl::Authorization in your class:
   #
   #   class Comment
-  #     include AccessControl::Authorization
+  #     include ActiveControl::Authorization
   #   end
   #
   # FIXME: Explain what to do next.

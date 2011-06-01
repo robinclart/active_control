@@ -1,9 +1,9 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "access_control/version"
+require "active_control/version"
 
 Gem::Specification.new do |s|
-  s.name        = "access_control"
+  s.name        = "active_control"
 
   s.version     = AccessControl::VERSION
   s.platform    = Gem::Platform::RUBY
@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
 
   s.authors     = ["Robin Clart"]
   s.email       = ["robin@charlin.be"]
-  s.homepage    = "https://github.com/robinclart/access_control"
+  s.homepage    = "https://github.com/robinclart/active_control"
 
   s.rubyforge_project = s.name
 
