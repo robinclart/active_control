@@ -18,7 +18,7 @@ class Comment
   end
 
   def authorize_user_to_manage?(user)
-    user
+    true
   end
 
   def authorize_user_to_destroy?(user)
