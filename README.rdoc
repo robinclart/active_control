@@ -1,6 +1,6 @@
 = ActiveControl
 
-+ActiveControl+ is a very simple authorization solution with no depedencies. Each rule is stored in the class that grant permission. Other object can then check if they have access to a specific action via the +can?+ method (or via +cannot?+).
+<tt>ActiveControl</tt> is a very simple authorization solution with no dependencies. Each rule is stored in the class that grant permission. Other object can then check if they have access to a specific action via the <tt>can?</tt> method (or via <tt>cannot?</tt>).
 
 == Install
 
@@ -14,7 +14,7 @@ The first thing to do is to <tt>include ActiveControl::Ability</tt> in the objec
       include ActiveControl::Ability
     end
 
-At the other end <tt>include ActiveControl::Authorization</tt> in the object that will  give its "blessing" or not based on some internal rules defined by you. Rules are just normal methods you have to defined at the instance-level with a specific name. E.g. if an instance of the <tt>User:Class</tt> wants to update another object you have to define +authorize_user_to_update?+ and make it returns a boolean.
+At the other end <tt>include ActiveControl::Authorization</tt> in the object that will  give its "blessing" or not based on some internal rules defined by you. Rules are just normal methods you have to defined at the instance-level with a specific name. E.g. if an instance of the <tt>User:Class</tt> wants to update another object you have to define <tt>authorize_user_to_update?</tt> and make it returns a boolean.
 
     class Page
       include ActiveControl::Authorization
