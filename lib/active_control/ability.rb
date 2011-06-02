@@ -1,22 +1,45 @@
 module ActiveControl
   # == Active Control Ability
   #
-  # FIXME: Explain what this class does.
+  # Creates two methods +can?+ and +cannot?+ to check if a remote object allows
+  # this object to perform a specific action on it.
   #
-  # To implement, just include ActiveControl::Ability in your class:
+  # To implement, just <tt>include ActiveControl::Ability</tt> in your class:
   #
   #   class User
   #     include ActiveControl::Ability
   #   end
   #
-  # FIXME: Explain what to do next.
+  # Those two methods requires that the remote object implements an +authorize?+
+  # method that returns a boolean.
+  #
+  # A minimal implementation could be:
+  #
+  #   class User
+  #     include ActiveControl::Ability
+  #   end
+  #
+  #   class Post
+  #     def authorize?(*args)
+  #       true
+  #     end
+  #   end
+  #
+  # You could then do something like this:
+  #
+  #   user = User.new
+  #   post = Post.new
+  #
+  #   puts user.can?(:update, post)
+  #   >> true
+  #
+  # Instead of defining an +authorize?+ method manually you could also implement
+  # ActiveControl::Authorization on the remote object.
   module Ability
-    # FIXME: Explain what this method returns
     def can?(action, remote_object)
       remote_object.authorize?(self, action)
     end
 
-    # FIXME: Explain what this method returns
     def cannot?(*args)
       !can?(*args)
     end
