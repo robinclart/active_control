@@ -22,7 +22,7 @@ At the other end <tt>include ActiveControl::Authorization</tt> in the object tha
       ...
   
       def authorize_user_to_update?(user)
-        user.id == page.user_id
+        user.id == self.user_id
       end
     end
 
